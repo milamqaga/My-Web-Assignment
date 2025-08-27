@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact —McDonald's</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo"></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact">
+    <h1>Contact Us</h1>
+
+    <section class="contact-info">
+    
+      <div>
+        <h2>McDonald's</h2>
+        <p>Discovery Drive Cape Town 7441</p>
+        <p>Days of week	Open hours:
+          Monday-Sunday from	
+          07:00 - 23:00
+          <p>Contact: 0215229700</p>
+          
+          </p>
+      </div>
+
+      
+    </section>
+
+    <section class="maps">
+      <h2>Our Locations</h2>
+
+      
+      <div class="map-grid">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.2128296547053!2d18.52445200317618!3d-33.80682035567469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc59265af44e2d%3A0xfe55763545edc30!2sMcDonald&#39;s%20Rivergate!5e0!3m2!1sen!2sza!4v1756238759675!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+       </div>
+    </section>
+
+    <section class="contact-form">
+      <h2>Send a message</h2>
+      <form id="contactForm" action="#" method="post" novalidate>
+        <label for="cname">Name</label>
+        <input id="cname" name="name" required />
+
+        <label for="cemail">Email</label>
+        <input id="cemail" name="email" type="email" required />
+
+        <label for="cmessage">Message</label>
+        <textarea id="cmessage" name="message" rows="5" required></textarea>
+
+        <button  type="submit">Send</button>
+        <p id="contactMsg" class="muted" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <p class="muted">© <span id="year5"></span>—McDonald's. All rights reserved. </p>
+  </footer>
+</body>
+</html>

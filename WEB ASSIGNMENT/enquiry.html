@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Enquiry — McDonald’s</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Logo"></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="Product.html">Products</a></li>
+          <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Enquiry:</h1>
+    <p>Please complete the form below.</p>
+
+    
+    <form id="enquiryForm" method="post" action="#" novalidate>
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="Date& Time Purchased"> Date & Time Purchased</label>
+      <input id="Date&Time Purchased" name="Date & Time Purchased" required/>
+
+      <label for="location of incident">Location if incident</label>
+      <input id="location of incident" name="location of incident" required/>
+
+      <label for="type">Enquiry type</label>
+      <select id="type" name="type" required>
+        <option value="">Choose...</option>
+        <option value="volunteer">complaint</option>
+        <option value="sponsor">compliment</option>
+        
+      </select>
+
+      <label for="message">Details</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">submit</button>
+      <p id="formMsg" class="muted" aria-live="polite"></p>
+
+      <p>Email: customer.care@za.mcd.com.</p>
+      <p>Contact: 0215229700</p>
+    </form>
+  </main>
+
+  <footer class="site-footer container">
+    <p class="muted">© <span id="year4"></span>McDonald’s. All rights reserved.</p>
+  </footer>
+</body>
+</html>
