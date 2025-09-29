@@ -100,7 +100,7 @@ body {
 .btn { 
   display: inline-block; 
   background: red; 
-  color: rgb(209, 231, 6); 
+  color: rgb(187, 231, 9); 
   padding: 0.375rem 0.625rem; /* 6px 10px => 0.375rem 0.625rem */
   border-radius: 0.5rem; /* 8px => 0.5rem */
   text-decoration: none; 
