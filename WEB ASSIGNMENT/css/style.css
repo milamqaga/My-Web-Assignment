@@ -234,14 +234,146 @@ aside#sidebar .quote textarea {
     grid-template-columns: 1fr; 
   }
 
-/* ----- MEDIA QUERY == 1024PX / RESPONSIVE ----- */ 
-@media only screen and (max-width: 1024px) {
-    .featured-text{
-        padding: 0;
-    }
-    .image, .image img{
-        width: 320px;
-        height: 320px;
-    }
+/* Reset default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/* General page styling */
+body {
+    background-color: #fdfdfd;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding: 15px;
+}
+
+nav img {
+    width: 50px;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #d32f2f; /* McDonald's red */
+}
+
+/* Headings */
+h1, h2, h3 {
+    color: #d32f2f; /* McDonald's brand red */
+    margin-bottom: 10px;
+}
+
+/* Section Styling */
+section {
+    margin: 30px auto;
+    max-width: 900px;
+    padding: 20px;
+    background: #fff8f0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Lists */
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin: 8px 0;
+}
+
+/* Footer (optional) */
+footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+    background: #fff;
+    border-top: 2px solid #f0f0f0;
+}
+
+/* Default styles (large screens like desktops) */
+body {
+  font-size: 1rem; /* Base size = 16px (default browser) */
+}
+
+/* Laptop screens (between 1024px and 1440px wide) */
+@media (max-width: 90rem) and (min-width: 64rem) {
+  body {
+    font-size: 1rem; /* 16px */
+  }
+
+  .welcome-flex {
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet / iPad screens (768px – 1023px) */
+@media (max-width: 64rem) and (min-width: 48rem) {
+  body {
+    font-size: 0.95rem; /* ~15px */
+  }
+
+  .welcome-flex {
+    flex-direction: column; /* stack text & image */
+    text-align: center;
+  }
+
+  .welcome-flex img {
+    max-width: 15rem; /* ~240px */
+  }
+}
+
+/* Mobile / Cellphone screens (below 768px) */
+@media (max-width: 48rem) {
+  body {
+    font-size: 0.875rem; /* ~14px */
+  }
+
+  .welcome-flex {
+    flex-direction: column; /* text above image */
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .welcome-flex img {
+    max-width: 12rem; /* ~192px */
+  }
+}
+
+  
+ 
+    
+     
+
+  
+
+
+
+
  
