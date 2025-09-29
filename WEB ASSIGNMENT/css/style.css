@@ -233,7 +233,7 @@ aside#sidebar .quote textarea {
   .maps .map-grid { 
     grid-template-columns: 1fr; 
   }
-}
+
 /* ----- MEDIA QUERY == 1024PX / RESPONSIVE ----- */ 
 @media only screen and (max-width: 1024px) {
     .featured-text{
