@@ -1,52 +1,242 @@
-body{ 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em; 
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
-    background-color: darkorange;
-}
-/*Global*/
-.container{
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+/* style.css - main stylesheet
+   Comments explain structure and choices for the assignment.
+*/
+
+/* Basic resets */
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
 }
 
-ul{
-    margin: 0;
-    padding: 0;
-}
-.button_1{
-    height: 30rem;
-    background: yellow;
-    border: 0;
-    padding-left: 20rem;
-    padding-right: 20rem;
-    color: firebrick;
-}
-.dark{
-    padding: 15rem;
-    background-color: bisque;
-    color: darkgoldenrod;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+html {
+  font-size: 16px; /* Default 1rem = 16px */
 }
 
-/*header*/
-header{
-    background: yellow;
-    color: coral;
-    padding-top: 30rem;
-    min-height: 70rem;
-    border-bottom: red 3rem solid;
+body {
+  height: 1rem;
+  background: #fff;
+  color: #222;
+  line-height: 1rem;
 }
-.button{
-    font-weight: 500rem;
-    padding: 12rem 12rem;
-    background-color: aqua;
-    border: none;
-    border-radius: 10rem;
-    cursor: pointer;
-    transition: .3s;
+
+.container { 
+  max-width: 62.5rem; /* 1rem = 16px, so 1000px becomes 62.5rem */
+  margin: 0 auto; 
+  padding: 3.125rem; /* 50px => 3.125rem */
+}
+
+/* Header */
+.site-header { 
+  background: #fff; 
+  border-bottom: 0.0625rem solid #eee; /* 1px => 0.0625rem */
+  position: sticky; 
+  top: 0; 
+  z-index: 10; 
+}
+
+.header-inner { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: 1.25rem; /* 20px => 1.25rem */
+}
+
+.logo img { 
+  height: 2.25rem; /* 36px => 2.25rem */
+  display: block; 
+}
+
+/* Navigation */
+.main-nav ul { 
+  list-style: none; 
+  display: flex; 
+  gap: 1.25rem; /* 20px => 1.25rem */
+  align-items: center; 
+}
+
+.main-nav a { 
+  text-decoration: none; 
+  color: var(--muted); 
+  font-weight: 600; 
+  padding: 0.625rem; /* 10px => 0.625rem */
+}
+
+.main-nav a[aria-current="page"] { 
+  color: var(--brand); 
+}
+
+.nav-link:hover {
+  color: orange;
+  background: lightyellow;
+  border-color: darkred;
+}
+
+/* Hero */
+.hero { 
+  background: linear-gradient(90deg, rgba(217, 79, 26, 0.05), rgba(243, 162, 97, 0.02)); 
+  padding: 3.125rem 0; /* 50px => 3.125rem */
+}
+
+.hero-inner { 
+  display: flex; 
+  gap: 3.125rem; /* 50px => 3.125rem */
+  align-items: center; 
+}
+
+.hero-text h1 { 
+  font-size: 2.5rem; /* 40px => 2.5rem */
+  margin-bottom: 1rem; /* 16px => 1rem */
+  color: var(--brand); 
+}
+
+.hero-image img { 
+  max-width: 23.75rem; /* 380px => 23.75rem */
+  width: 100%; 
+  border-radius: 1rem;
+}
+
+/* Buttons */
+.btn { 
+  display: inline-block; 
+  background: var(--brand); 
+  color: white; 
+  padding: 0.375rem 0.625rem; /* 6px 10px => 0.375rem 0.625rem */
+  border-radius: 0.5rem; /* 8px => 0.5rem */
+  text-decoration: none; 
+  font-weight: 700; 
+}
+
+/* KPIs and featured cards */
+.kpis { 
+  margin-top: 1.5rem; /* 24px => 1.5rem */
+}
+
+.kpi-list { 
+  list-style: disc; 
+  margin-left: 1.25rem; /* 20px => 1.25rem */
+  color: var(--muted); 
+}
+
+.cards { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr)); /* 220px => 13.75rem */
+  gap: 1.25rem; /* 20px => 1.25rem */
+  margin-top: 1rem; /* 16px => 1rem */
+}
+
+.card { 
+  border: 0.0625rem solid #eee; /* 1px => 0.0625rem */
+  padding: 1rem; /* 16px => 1rem */
+  border-radius: 0.5rem; /* 8px => 0.5rem */
+  background: #fff; 
+}
+
+.card img { 
+  width: 100%; 
+  height: 8.75rem; /* 140px => 8.75rem */
+  object-fit: cover; 
+  border-radius: 0.375rem; /* 6px => 0.375rem */
+}
+
+/* Products */
+.product-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr)); /* 220px => 13.75rem */
+  gap: 1.25rem; /* 20px => 1.25rem */
+}
+
+.product img { 
+  width: 100%; 
+  height: 9.375rem; /* 150px => 9.375rem */
+  object-fit: cover; 
+  border-radius: 0.375rem; /* 6px => 0.375rem */
+}
+
+/* Forms */
+form { 
+  display: grid; 
+  gap: 0.6rem; 
+  max-width: 40rem; /* 640px => 40rem */
+}
+
+label { 
+  font-weight: 600; 
+}
+
+input, textarea, select { 
+  padding: 0.6rem; /* 10px => 0.6rem */
+  border: 0.0625rem solid #ddd; /* 1px => 0.0625rem */
+  border-radius: 0.375rem; /* 6px => 0.375rem */
+  font-size: 1rem; 
+}
+
+/* Footer */
+.site-footer { 
+  margin-top: 2.5rem; /* 40px => 2.5rem */
+  background: #fafafa; 
+  padding: 1.25rem 0; /* 20px => 1.25rem */
+  border-top: 0.0625rem solid #eee; /* 1px => 0.0625rem */
+}
+
+.footer-columns { 
+  display: flex; 
+  gap: 2.5rem; /* 40px => 2.5rem */
+  flex-wrap: wrap; 
+}
+
+.muted { 
+  color: #6b6b6b; 
+  font-size: 0.95rem; /* 15px => 0.95rem */
+}
+
+/* Team block */
+.team { 
+  display: flex; 
+  gap: 1.25rem; /* 20px => 1.25rem */
+  align-items: center; 
+  margin-top: 1rem; /* 16px => 1rem */
+}
+
+.team img { 
+  width: 7.5rem; /* 120px => 7.5rem */
+  height: 7.5rem; /* 120px => 7.5rem */
+  object-fit: cover; 
+  border-radius: 0.5rem; /* 8px => 0.5rem */
+}
+
+/* Maps */
+.maps .map-grid { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 1.25rem; /* 20px => 1.25rem */
+}
+
+.maps iframe { 
+  width: 100%; 
+  height: 15rem; /* 240px => 15rem */
+  border: 0; 
+  border-radius: 0.375rem; /* 6px => 0.375rem */
+}
+
+/* Responsive */
+@media (max-width: 50rem) { /* 800px => 50rem */
+  html {
+    font-size: 14px; /* Adjust base font size for smaller screens */
+  }
+  
+  .hero-inner { 
+    flex-direction: column-reverse; 
+    text-align: center; 
+  }
+  
+  .header-inner { 
+    flex-direction: column; 
+    gap: 0.625rem; /* 10px => 0.625rem */
+    align-items: flex-start; 
+  }
+  
+  .maps .map-grid { 
+    grid-template-columns: 1fr; 
+  }
 }
