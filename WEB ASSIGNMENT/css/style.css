@@ -177,6 +177,7 @@ input, textarea, select {
   background: #fafafa; 
   padding: 1.25rem 0; /* 20px => 1.25rem */
   border-top: 0.0625rem solid #eee; /* 1px => 0.0625rem */
+  
 }
 
 .footer-columns { 
